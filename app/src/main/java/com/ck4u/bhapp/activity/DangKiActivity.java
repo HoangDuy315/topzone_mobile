@@ -33,10 +33,10 @@ public class DangKiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ki);
         initView();
-        initControll();
+        initControl();
     }
 
-    private void initControll() {
+    private void initControl() {
         backLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

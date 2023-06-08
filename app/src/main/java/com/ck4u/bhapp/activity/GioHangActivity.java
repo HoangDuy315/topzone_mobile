@@ -68,16 +68,16 @@ public class GioHangActivity extends AppCompatActivity {
         } else {
             adapter = new GioHangAdapter(getApplicationContext(), Utils.manggiohang);
             recyclerView.setAdapter(adapter);
+            btnmuahang.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getApplicationContext(), ThanhToanActivity.class);
+                    intent.putExtra("tongtien",tongtiensp);
+                    startActivity(intent);
+                }
+            });
         }
 
-        btnmuahang.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ThanhToanActivity.class);
-                intent.putExtra("tongtien",tongtiensp);
-                startActivity(intent);
-            }
-        });
     }
 
     private void initView() {

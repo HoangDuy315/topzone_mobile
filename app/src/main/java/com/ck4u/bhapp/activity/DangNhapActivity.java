@@ -81,12 +81,9 @@ public class DangNhapActivity extends AppCompatActivity {
                                         Toast.makeText(getApplicationContext(), throwable.getMessage(), Toast.LENGTH_SHORT).show();
                                     }
                             ));
-
                 }
             }
         });
-
-
     }
 
     private void initView() {
@@ -97,8 +94,6 @@ public class DangNhapActivity extends AppCompatActivity {
         email = findViewById(R.id.emaildangnhap);
         pass = findViewById(R.id.passdangnhap);
         btndangnhap = findViewById(R.id.btndangnhap);
-
-
 
 
         // read data

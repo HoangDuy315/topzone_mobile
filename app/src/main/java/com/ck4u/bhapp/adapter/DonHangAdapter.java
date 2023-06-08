@@ -36,6 +36,8 @@ public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         DonHang donHang = listdonhang.get(position);
         holder.txtdonhang.setText("Purchase order: " + donHang.getId());
+        holder.diachi.setText("Your Address: " +donHang.getDiachi());
+        holder.tongtien.setText("Total: " +donHang.getTongtien() + "$");
         LinearLayoutManager layoutManager = new LinearLayoutManager(
                 holder.reChitiet.getContext(),
                 LinearLayoutManager.VERTICAL,
@@ -58,13 +60,15 @@ public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.MyViewHo
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView txtdonhang;
+        TextView txtdonhang, diachi, tongtien;
         RecyclerView reChitiet;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             txtdonhang = itemView.findViewById(R.id.iddonhang);
             reChitiet = itemView.findViewById(R.id.recycleview_chitiet);
+            diachi = itemView.findViewById(R.id.diachi_donhang);
+            tongtien = itemView.findViewById(R.id.giatien_donhang);
         }
     }
 }
